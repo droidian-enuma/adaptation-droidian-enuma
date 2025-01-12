@@ -1,0 +1,11 @@
+[Unit]
+Description=Fix permission
+Before=fix-sound.service
+
+[Service]
+Type=oneshot
+ExecStart=/bin/chmod +x /usr/local/bin/fix_sound_bindings.sh
+
+[Install]
+WantedBy=multi-user.target
+
